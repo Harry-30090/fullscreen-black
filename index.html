@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Screen Black</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 40px;
+      }
+
+      .button {
+        width: 360px;
+        height: 240px;
+        cursor: pointer;
+        background: #000;
+      }
+
+      #fullscreen {
+        cursor: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>この下のボタンを押してください</h1>
+    <button class="button"></button>
+    <div id="fullscreen"></div>
+
+    <script>
+      const button = document.querySelector(".button");
+      const fullscreen = document.getElementById("fullscreen");
+      const color = "#000000";
+
+      button.onclick = () => {
+        fullscreen.style.backgroundColor = color;
+        fullscreen.requestFullscreen();
+      };
+    </script>
+  </body>
+</html>
